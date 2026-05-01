@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tathagat Satiram Dhamma Jyoti Trust</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background:#f9f9f9; }
+    header { background: #0b3d91; color: white; padding: 20px; text-align: center; }
+    nav { background: #ffffff; padding: 10px; text-align: center; box-shadow:0 2px 5px rgba(0,0,0,0.1);} 
+    nav a { margin: 10px; text-decoration: none; color: #333; font-weight:bold; }
+    section { padding: 30px; }
+    h2 { color:#0b3d91; }
+    footer { background: #0b3d91; color: white; text-align: center; padding: 15px; }
+    .btn { background: orange; padding: 12px 18px; color: white; text-decoration: none; border: none; cursor:pointer; }
+    input, textarea { width: 100%; padding: 10px; margin: 8px 0; border:1px solid #ccc; }
+    form { max-width: 500px; }
+    .card { background:white; padding:20px; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin-bottom:20px;} 
+    .whatsapp { position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:12px 15px; border-radius:50%; text-decoration:none; font-size:20px; }
+    table { width:100%; border-collapse: collapse; }
+    table, th, td { border:1px solid #ccc; }
+    th, td { padding:10px; text-align:center; }
+    th { background:#0b3d91; color:white; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Tathagat Satiram Dhamma Jyoti Trust</h1>
+  <p>प्रज्ञा • शील • करुणा</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About</a>
+  <a href="#activities">Activities</a>
+  <a href="#projects">Projects</a>
+  <a href="#funds">Funds</a>
+  <a href="#membership">Membership</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+  <div class="card">
+    <h2>Welcome</h2>
+    <p>हमारा ट्रस्ट समाज सेवा, शिक्षा और मानव कल्याण के लिए कार्य करता है।</p>
+    <a class="btn" href="#membership">Join Membership ₹100</a> <span style="margin-left:10px;color:red;font-weight:bold;">Donate Coming Soon</span>
+  </div>
+</section>
+
+<section id="about">
+  <div class="card">
+    <h2>About Us</h2>
+    <p>Tathagat Satiram Dhamma Jyoti Trust एक सामाजिक और धार्मिक संगठन है जो बुद्ध के मार्ग पर चलते हुए समाज में शांति और करुणा फैलाने का कार्य करता है।</p>
+  </div>
+</section>
+
+<section id="activities">
+  <div class="card">
+    <h2>Our Activities</h2>
+    <ul>
+      <li>शिक्षा सहायता</li>
+      <li>गरीबों की मदद</li>
+      <li>धम्म प्रचार</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="card">
+    <h2>Current Projects</h2>
+    <ul>
+      <li>Free Education Program</li>
+      <li>गरीब परिवार सहायता योजना</li>
+      <li>धम्म जागरूकता अभियान</li>
+    </ul>
+  </div>
+</section>
+
+<section id="funds">
+  <div class="card">
+    <h2>Funds / Donations Details</h2>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Donor Name</th>
+        <th>Amount (₹)</th>
+      </tr>
+      <tr>
+        <td>01-05-2026</td>
+        <td>Example Donor</td>
+        <td>1000</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section id="membership">
+  <div class="card">
+    <h2>Membership Form</h2>
+    <p>Membership Fee: ₹100</p>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+      <input type="text" id="name" placeholder="Full Name" required>
+      <input type="tel" id="mobile" placeholder="Mobile Number" required>
+      <textarea id="address" placeholder="Address"></textarea>
+      <button class="btn">Join & Send</button>
+    </form>
+
+    <p><b>Payment:</b> UPI ID will be updated soon.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="card">
+    <h2>Contact Us</h2>
+    <p>📍 Udaupur Shekhpur Birno, Ghazipur, Uttar Pradesh - 233300</p>
+    <p>📞 9936263863</p>
+    <p>📧 vimilash993626@gmail.com</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Tathagat Satiram Dhamma Jyoti Trust</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/919936263863" target="_blank">💬</a>
+
+<script>
+function sendToWhatsApp() {
+  var name = document.getElementById('name').value;
+  var mobile = document.getElementById('mobile').value;
+  var address = document.getElementById('address').value;
+
+  var message = `New Membership Request:%0AName: ${name}%0AMobile: ${mobile}%0AAddress: ${address}`;
+  var url = "https://wa.me/919936263863?text=" + message;
+
+  window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
